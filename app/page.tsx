@@ -40,7 +40,7 @@ export default function Home() {
                 href="#coming-soon"
                 className="rounded-2xl bg-orange-500 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-orange-600"
               >
-                Coming Soon on iOS
+                Join the waitlist
               </a>
 
               <Link
@@ -86,6 +86,117 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+<section className="bg-white">
+  <div className="mx-auto max-w-6xl px-6 py-20">
+    <div className="text-center">
+      <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+        How MyUniLoop works
+      </h2>
+      <p className="mt-4 text-lg text-gray-600">
+        Simple, fast, and built around student needs.
+      </p>
+    </div>
+
+    <div className="mt-14 grid gap-8 md:grid-cols-3">
+      <div className="text-center">
+        <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
+          1
+        </div>
+        <h3 className="text-xl font-semibold">Join your campus</h3>
+        <p className="mt-2 text-gray-600">
+          Sign up and connect with students in your university community.
+        </p>
+      </div>
+
+      <div className="text-center">
+        <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
+          2
+        </div>
+        <h3 className="text-xl font-semibold">Explore & interact</h3>
+        <p className="mt-2 text-gray-600">
+          Discover posts, listings, and people around your campus.
+        </p>
+      </div>
+
+      <div className="text-center">
+        <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
+          3
+        </div>
+        <h3 className="text-xl font-semibold">Buy, sell, connect</h3>
+        <p className="mt-2 text-gray-600">
+          Chat, trade items, and stay connected — all in one place.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="bg-orange-50">
+  <div className="mx-auto max-w-6xl px-6 py-20 text-center">
+    <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+      Designed for real student life
+    </h2>
+
+    <p className="mt-4 text-lg text-gray-600">
+      A simple, modern interface built to make campus interaction effortless.
+    </p>
+
+    <div className="mt-12 grid gap-6 md:grid-cols-3">
+      <div className="h-64 rounded-3xl bg-white border border-orange-100 flex items-center justify-center text-gray-400">
+        App Screen 1
+      </div>
+
+      <div className="h-64 rounded-3xl bg-white border border-orange-100 flex items-center justify-center text-gray-400">
+        App Screen 2
+      </div>
+
+      <div className="h-64 rounded-3xl bg-white border border-orange-100 flex items-center justify-center text-gray-400">
+        App Screen 3
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="max-w-6xl mx-auto px-6 py-16">
+  <h2 className="text-3xl font-bold text-center mb-10">
+    See MyUniLoop in action
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-6">
+    <div className="bg-white rounded-2xl shadow p-4">
+      <img src="/app1.png" className="rounded-xl" />
+      <p className="mt-3 text-sm text-gray-600">Feed & posts</p>
+    </div>
+
+    <div className="bg-white rounded-2xl shadow p-4">
+      <img src="/app2.png" className="rounded-xl" />
+      <p className="mt-3 text-sm text-gray-600">Marketplace</p>
+    </div>
+
+    <div className="bg-white rounded-2xl shadow p-4">
+      <img src="/app3.png" className="rounded-xl" />
+      <p className="mt-3 text-sm text-gray-600">Chat</p>
+    </div>
+  </div>
+</section>
+
+<section className="bg-white">
+  <div className="mx-auto max-w-4xl px-6 py-20 text-center">
+    <h2 className="text-3xl font-bold text-gray-900">
+      Built with purpose
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-600 leading-8">
+      MyUniLoop is developed by Leeban Soft Dev with the goal of improving
+      how students connect, trade, and communicate within their campus environment.
+    </p>
+
+    <p className="mt-4 text-gray-500">
+      Designed for real-world student needs, not just another social app.
+    </p>
+  </div>
+</section>
 
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
