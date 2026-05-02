@@ -137,7 +137,7 @@ export default function Home() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {["🎓 Student-Only", "🔒 Safe & Verified", "⚡ Real-Time"].map((badge) => (
+              {["🎓 Student-Only", "🔒 Safe & Verified", "⚡ Real-Time", "🍎 iOS"].map((badge) => (
                 <span
                   key={badge}
                   className="rounded-full bg-orange-50 border border-orange-100 px-4 py-1.5 text-xs font-semibold text-orange-700"
@@ -270,10 +270,10 @@ export default function Home() {
             Download MyUniLoop today and connect with thousands of students.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-10 flex items-center justify-center">
             <a
               href="#"
-              className="flex items-center gap-3 rounded-2xl bg-black px-7 py-4 text-white hover:bg-gray-900 transition-colors shadow-xl"
+              className="flex items-center gap-3 rounded-2xl bg-black px-8 py-4 text-white hover:bg-gray-900 transition-colors shadow-xl"
             >
               <span className="text-2xl">🍎</span>
               <div className="text-left">
@@ -281,19 +281,9 @@ export default function Home() {
                 <p className="text-base font-bold">App Store</p>
               </div>
             </a>
-            <a
-              href="#"
-              className="flex items-center gap-3 rounded-2xl bg-black px-7 py-4 text-white hover:bg-gray-900 transition-colors shadow-xl"
-            >
-              <span className="text-2xl">▶</span>
-              <div className="text-left">
-                <p className="text-xs text-white/70">Get it on</p>
-                <p className="text-base font-bold">Google Play</p>
-              </div>
-            </a>
           </div>
 
-          <p className="mt-6 text-sm text-white/60">Available on iOS and Android · Coming soon</p>
+          <p className="mt-6 text-sm text-white/60">Available on iOS · Coming soon</p>
         </div>
       </section>
 
