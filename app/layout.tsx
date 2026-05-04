@@ -3,34 +3,35 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "MyUniLoop — The App for University Students",
+  title: "MyUniLoop — Your Campus, All In One Place",
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
     apple: "/icon.png",
   },
   description:
-    "MyUniLoop is the all-in-one social and marketplace app for university students. Feed, marketplace, loops, chat, and more.",
+    "MyUniLoop is the all-in-one social and marketplace app for university students. Feed, marketplace, loops, real-time chat, vibes, anonymous tea posts, and more — all built for campus life.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-gray-900">
+      <body className="min-h-screen">
         <div className="min-h-screen flex flex-col">
-          {/* Navbar */}
-          <header className="sticky top-0 z-50 border-b border-orange-100 bg-white/90 backdrop-blur">
+
+          {/* Navbar — light theme */}
+          <header className="sticky top-0 z-50 border-b border-orange-100/60 bg-white/90 backdrop-blur-xl">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
               <Link href="/" className="flex items-center gap-3">
                 <img
                   src="/logo.png"
                   alt="MyUniLoop"
-                  className="w-9 h-9 rounded-full object-cover"
+                  className="w-9 h-9 rounded-2xl object-cover shadow-sm ring-1 ring-orange-100"
                 />
-                <span className="text-xl font-black text-orange-500">MyUniLoop</span>
+                <span className="text-xl font-black gradient-text">MyUniLoop</span>
               </Link>
 
-              <nav className="flex items-center gap-5 text-sm font-medium text-gray-600">
+              <nav className="flex items-center gap-6 text-sm font-medium text-gray-500">
                 <Link href="/" className="hidden sm:block hover:text-orange-500 transition-colors">
                   Home
                 </Link>
@@ -40,7 +41,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/privacy" className="hidden sm:block hover:text-orange-500 transition-colors">
                   Privacy
                 </Link>
-                <Link href="/contact" className="rounded-full bg-orange-500 px-5 py-2 text-white font-semibold hover:bg-orange-600 transition-colors shadow-sm">
+                <Link
+                  href="/contact"
+                  className="rounded-xl btn-orange py-2 px-5 text-sm"
+                >
                   Contact
                 </Link>
               </nav>
@@ -49,25 +53,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <main className="flex-1">{children}</main>
 
-          {/* Footer */}
-          <footer className="border-t border-orange-100 bg-orange-50">
-            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-gray-500 md:flex-row md:items-center md:justify-between">
-              <div className="flex items-center gap-2">
-                <img src="/logo.png" alt="MyUniLoop" className="w-6 h-6 rounded-full object-cover" />
-                <span className="font-bold text-orange-500">MyUniLoop</span>
+          {/* Footer — dark theme */}
+          <footer className="section-dark border-t border-white/[0.06]">
+            <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12 md:flex-row md:items-center md:justify-between">
+              <div className="flex items-center gap-3">
+                <img src="/logo.png" alt="MyUniLoop" className="w-7 h-7 rounded-xl object-cover ring-1 ring-white/10" />
+                <span className="font-black gradient-text-dark">MyUniLoop</span>
               </div>
-              <p>© 2025 MyUniLoop by{" "}
-                <a href="https://leeban.co" className="hover:text-orange-500 transition-colors font-semibold">
+              <p className="text-sm text-white/35">
+                © 2025 MyUniLoop by{" "}
+                <a href="https://leeban.co" className="hover:text-orange-400 transition-colors font-semibold text-white/50">
                   Leeban Soft.Dev.
                 </a>
               </p>
-              <div className="flex gap-5">
-                <Link href="/privacy" className="hover:text-orange-500 transition-colors">Privacy Policy</Link>
-                <Link href="/contact" className="hover:text-orange-500 transition-colors">Contact</Link>
-                <a href="https://leeban.co" className="hover:text-orange-500 transition-colors">leeban.co</a>
+              <div className="flex gap-6 text-sm text-white/35">
+                <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+                <a href="https://leeban.co" className="hover:text-white transition-colors">leeban.co</a>
               </div>
             </div>
           </footer>
+
         </div>
       </body>
     </html>
