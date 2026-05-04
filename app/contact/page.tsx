@@ -9,7 +9,7 @@ export default function ContactPage() {
         </p>
 
         <p className="font-semibold text-orange-500">
-          hello@leeban.co
+          <a href="mailto:info@leeban.co">info@leeban.co</a>
         </p>
 
         <p className="text-sm text-gray-400">
