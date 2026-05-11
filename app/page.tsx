@@ -33,7 +33,7 @@ function WaitlistForm({ dark = false }: { dark?: boolean }) {
       <div className="flex flex-col gap-3 sm:flex-row">
         <input
           type="email"
-          placeholder="your@university.edu"
+          placeholder="your@email.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
@@ -293,7 +293,7 @@ export default function Home() {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {[
-              { n: "01", icon: "🎓", title: "Sign up with your university email", text: "Create your student profile, pick your university, and you're in. Verified and safe from day one." },
+              { n: "01", icon: "🎓", title: "Sign up with your personal email", text: "Create your student profile, pick your university, and you're in. Verified and safe from day one." },
               { n: "02", icon: "🔥", title: "Explore your personalised feed", text: "Discover posts, listings, loops, and people. Your feed gets smarter the more you use it." },
               { n: "03", icon: "⚡", title: "Buy, sell, vibe, connect", text: "Chat with anyone, trade items, join loops, or spill some tea — all inside one beautifully designed app." },
             ].map((step) => (
