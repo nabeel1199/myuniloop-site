@@ -61,15 +61,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <span className="font-black gradient-text-dark">MyUniLoop</span>
               </div>
               <p className="text-sm text-white/35">
-                © 2025 MyUniLoop by{" "}
+                © 2026 MyUniLoop by{" "}
                 <a href="https://leeban.co" className="hover:text-orange-400 transition-colors font-semibold text-white/50">
-                  Leeban Soft.Dev.
+                  Nabeel Khan
                 </a>
               </p>
               <div className="flex gap-6 text-sm text-white/35">
                 <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/copyright" className="hover:text-white transition-colors">Copyright</Link>
                 <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-                <a href="https://leeban.co" className="hover:text-white transition-colors">leeban.co</a>
               </div>
             </div>
           </footer>
