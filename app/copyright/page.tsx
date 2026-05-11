@@ -21,22 +21,23 @@ export default function CopyrightPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">Ownership</h2>
           <p>
-            © 2026 Nabeel Khan. All rights reserved.
+            © 2026 Leeban Soft. Dev. (SMC-Private) Limited. All rights reserved.
           </p>
           <p className="mt-3">
             MyUniLoop, including its name, logo, mascot (Loopi), app design, user interface,
-            source code, and all associated content, is the intellectual property of Nabeel Khan
-            and is protected by copyright, trademark, and other applicable intellectual property laws.
+            source code, and all associated content, is the intellectual property of{" "}
+            <strong>Leeban Soft. Dev. (SMC-Private) Limited</strong> and is protected by
+            copyright, trademark, and other applicable intellectual property laws.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">App & Software</h2>
           <p>
-            The MyUniLoop mobile application and website are proprietary software. You may not
-            copy, modify, distribute, sell, reverse engineer, or create derivative works based on
-            any part of the application or its source code without express written permission from
-            Nabeel Khan.
+            The MyUniLoop mobile application and website are proprietary software owned and operated
+            by Leeban Soft. Dev. (SMC-Private) Limited. You may not copy, modify, distribute, sell,
+            reverse engineer, or create derivative works based on any part of the application or its
+            source code without express written permission from Leeban Soft. Dev. (SMC-Private) Limited.
           </p>
         </section>
 
@@ -44,8 +45,8 @@ export default function CopyrightPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-3">Brand & Mascot</h2>
           <p>
             The MyUniLoop name, logo, and mascot character &quot;Loopi&quot; are original works owned
-            exclusively by Nabeel Khan. Unauthorised use, reproduction, or distribution of these
-            brand assets is strictly prohibited.
+            exclusively by Leeban Soft. Dev. (SMC-Private) Limited. Unauthorised use, reproduction,
+            or distribution of these brand assets is strictly prohibited.
           </p>
         </section>
 
@@ -86,11 +87,11 @@ export default function CopyrightPage() {
             <li>A statement that you have a good-faith belief the use is not authorised</li>
           </ul>
           <div className="mt-6 p-5 bg-orange-50 rounded-2xl border border-orange-100">
-            <p className="font-bold text-gray-900">MyUniLoop</p>
-            <p className="text-gray-600">
+            <p className="font-bold text-gray-900">Leeban Soft. Dev. (SMC-Private) Limited</p>
+            <p className="text-gray-600 mt-1">
               Email:{" "}
-              <a href="mailto:support@myuniloop.com" className="text-orange-500 hover:underline">
-                support@myuniloop.com
+              <a href="mailto:info@leeban.com" className="text-orange-500 hover:underline">
+                info@leeban.com
               </a>
             </p>
             <p className="text-gray-600">Website: www.myuniloop.com</p>

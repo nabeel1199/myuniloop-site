@@ -21,10 +21,11 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">1. Introduction</h2>
           <p>
-            Welcome to MyUniLoop (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). We are committed to protecting your
-            personal information and your right to privacy. This Privacy Policy explains how we
-            collect, use, store, and share your information when you use our mobile application
-            and related services (collectively, the &quot;Service&quot;).
+            Welcome to MyUniLoop (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). MyUniLoop is developed and operated
+            by <strong>Leeban Soft. Dev. (SMC-Private) Limited</strong>. We are committed to
+            protecting your personal information and your right to privacy. This Privacy Policy
+            explains how we collect, use, store, and share your information when you use our
+            mobile application and related services (collectively, the &quot;Service&quot;).
           </p>
           <p className="mt-3">
             By using MyUniLoop, you agree to the collection and use of information as described
@@ -143,8 +144,8 @@ export default function PrivacyPage() {
           </ul>
           <p className="mt-3">
             To exercise any of these rights, contact us at{" "}
-            <a href="mailto:support@myuniloop.com" className="text-orange-500 hover:underline">
-              support@myuniloop.com
+            <a href="mailto:info@leeban.com" className="text-orange-500 hover:underline">
+              info@leeban.com
             </a>
             .
           </p>
@@ -211,11 +212,12 @@ export default function PrivacyPage() {
             please contact us at:
           </p>
           <div className="mt-4 p-5 bg-orange-50 rounded-2xl border border-orange-100">
-            <p className="font-bold text-gray-900">MyUniLoop</p>
+            <p className="font-bold text-gray-900">Leeban Soft. Dev. (SMC-Private) Limited</p>
+            <p className="text-gray-500 text-sm mb-2">Operating MyUniLoop</p>
             <p className="text-gray-600">
               Email:{" "}
-              <a href="mailto:support@myuniloop.com" className="text-orange-500 hover:underline">
-                support@myuniloop.com
+              <a href="mailto:info@leeban.com" className="text-orange-500 hover:underline">
+                info@leeban.com
               </a>
             </p>
             <p className="text-gray-600">Website: www.myuniloop.com</p>
@@ -223,6 +225,10 @@ export default function PrivacyPage() {
         </section>
 
       </div>
+    </main>
+  )
+}
+/div>
     </main>
   )
 }
