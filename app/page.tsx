@@ -686,23 +686,133 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════════════════
-          ABOUT — DARK
+          COMPLIANCE & LEGAL — DARK
       ══════════════════════════════════════════════════════ */}
-      <section className="section-dark py-16">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <p className="text-white/30 text-sm leading-8">
-            MyUniLoop is built with purpose by{" "}
-            <a href="https://leeban.co" className="text-orange-400 hover:text-orange-300 transition-colors font-semibold">
-              Leeban Soft.Dev.
-            </a>{" "}
-            with the goal of improving how students connect, trade, and communicate
-            within their campus — wherever in the world that campus is.
-          </p>
-          <div className="flex justify-center gap-6 mt-6 text-sm text-white/25">
-            <Link href="/about" className="hover:text-white transition-colors">About</Link>
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+      <section className="section-dark border-t border-white/[0.06] py-20">
+        <div className="mx-auto max-w-6xl px-6">
+
+          {/* Zero-tolerance banner */}
+          <div className="mb-12 rounded-2xl border border-red-900/40 bg-red-950/30 p-6 flex gap-4 items-start">
+            <span className="text-2xl mt-0.5 flex-shrink-0">🚫</span>
+            <div>
+              <p className="font-bold text-red-400 mb-1">Zero-Tolerance Policy</p>
+              <p className="text-sm text-red-300/70 leading-relaxed">
+                MyUniLoop has <strong className="text-red-300">zero tolerance</strong> for
+                objectionable content, hate speech, harassment, or abusive behaviour.
+                All reports are reviewed within <strong className="text-red-300">24 hours</strong>.
+                Violations result in immediate content removal and permanent account ban.{" "}
+                <Link href="/community" className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors">
+                  Read our Community Guidelines →
+                </Link>
+              </p>
+            </div>
           </div>
+
+          {/* Three compliance columns */}
+          <div className="grid gap-10 sm:grid-cols-3 mb-14">
+
+            {/* Safety */}
+            <div>
+              <p className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-4">Safety &amp; Compliance</p>
+              <ul className="space-y-3">
+                {[
+                  { href: "/community", label: "Community Guidelines", desc: "Rules, zero-tolerance policy, and enforcement" },
+                  { href: "/terms",     label: "Terms of Use (EULA)",  desc: "User agreement required at signup" },
+                  { href: "/privacy",   label: "Privacy Policy",        desc: "How we collect, store, and protect your data" },
+                  { href: "/copyright", label: "Copyright Policy",       desc: "Intellectual property and DMCA notices" },
+                ].map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="group flex flex-col gap-0.5">
+                      <span className="text-sm font-semibold text-white/70 group-hover:text-orange-400 transition-colors">
+                        {l.label}
+                      </span>
+                      <span className="text-xs text-white/30">{l.desc}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Reporting */}
+            <div>
+              <p className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-4">Report &amp; Support</p>
+              <ul className="space-y-3">
+                {[
+                  { href: "/contact",   label: "Contact Support",             desc: "Get help with your account or the app" },
+                  { href: "mailto:myuniloop@leeban.com?subject=Report%20Inappropriate%20Activity",
+                    label: "Report Inappropriate Activity", desc: "Report abuse, harassment, or harmful content" },
+                  { href: "mailto:myuniloop@leeban.com?subject=Account%20Appeal",
+                    label: "Account Appeal",                desc: "Appeal a suspension or permanent ban" },
+                  { href: "/about",     label: "About MyUniLoop",              desc: "Our mission, team, and company details" },
+                ].map((l) => (
+                  <li key={l.label}>
+                    <Link href={l.href} className="group flex flex-col gap-0.5">
+                      <span className="text-sm font-semibold text-white/70 group-hover:text-orange-400 transition-colors">
+                        {l.label}
+                      </span>
+                      <span className="text-xs text-white/30">{l.desc}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Age rating + contact */}
+            <div>
+              <p className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-4">App Information</p>
+              <div className="space-y-4">
+                <div className="rounded-xl border border-white/[0.07] bg-white/[0.03] p-4">
+                  <p className="text-xs font-bold text-white/50 mb-1">Age Rating</p>
+                  <p className="text-2xl font-black text-white">17+</p>
+                  <p className="text-xs text-white/30 mt-1">
+                    MyUniLoop is intended for users aged 17 and older. Accounts belonging to
+                    underage users are removed immediately.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-white/[0.07] bg-white/[0.03] p-4">
+                  <p className="text-xs font-bold text-white/50 mb-1">Developer Contact</p>
+                  <p className="text-sm font-semibold text-white/70">Leeban Soft. Dev.</p>
+                  <p className="text-xs text-white/30">(SMC-Private) Limited</p>
+                  <a
+                    href="mailto:myuniloop@leeban.com"
+                    className="mt-2 block text-xs text-orange-400 hover:text-orange-300 transition-colors"
+                  >
+                    myuniloop@leeban.com
+                  </a>
+                  <a
+                    href="https://myuniloop.com"
+                    className="block text-xs text-white/30 hover:text-white/50 transition-colors"
+                  >
+                    www.myuniloop.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Divider + bottom copyright strip */}
+          <div className="border-t border-white/[0.06] pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <img src="/logo.png" alt="MyUniLoop" className="w-7 h-7 rounded-xl object-cover ring-1 ring-white/10" />
+              <div>
+                <p className="font-black text-sm gradient-text-dark">MyUniLoop</p>
+                <p className="text-[11px] text-white/25">Your campus. All in one place.</p>
+              </div>
+            </div>
+
+            <p className="text-xs text-white/25 text-center">
+              © 2026 Leeban Soft. Dev. (SMC-Private) Limited. All rights reserved.
+            </p>
+
+            <div className="flex flex-wrap gap-4 text-xs text-white/30">
+              <Link href="/privacy"   className="hover:text-white transition-colors">Privacy</Link>
+              <Link href="/terms"     className="hover:text-white transition-colors">Terms</Link>
+              <Link href="/copyright" className="hover:text-white transition-colors">Copyright</Link>
+              <Link href="/community" className="hover:text-white transition-colors">Guidelines</Link>
+              <Link href="/contact"   className="hover:text-white transition-colors">Contact</Link>
+            </div>
+          </div>
+
         </div>
       </section>
 

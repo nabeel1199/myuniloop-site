@@ -38,7 +38,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/about" className="hidden sm:block hover:text-orange-500 transition-colors">
                   About
                 </Link>
-                <Link href="/privacy" className="hidden sm:block hover:text-orange-500 transition-colors">
+                <Link href="/community" className="hidden md:block hover:text-orange-500 transition-colors">
+                  Guidelines
+                </Link>
+                <Link href="/privacy" className="hidden md:block hover:text-orange-500 transition-colors">
                   Privacy
                 </Link>
                 <Link
@@ -55,23 +58,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           {/* Footer — dark theme */}
           <footer className="section-dark border-t border-white/[0.06]">
-            <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12 md:flex-row md:items-center md:justify-between">
-              <div className="flex items-center gap-3">
-                <img src="/logo.png" alt="MyUniLoop" className="w-7 h-7 rounded-xl object-cover ring-1 ring-white/10" />
-                <span className="font-black gradient-text-dark">MyUniLoop</span>
-              </div>
-              <p className="text-sm text-white/35">
-                © 2026{" "}
-                <span className="font-semibold text-white/50">
-                  Leeban Soft. Dev. (SMC-Private) Limited
-                </span>
-                . All rights reserved.
-              </p>
-              <div className="flex gap-6 text-sm text-white/35">
-                <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
-                <Link href="/copyright" className="hover:text-white transition-colors">Copyright</Link>
-                <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+            <div className="mx-auto max-w-6xl px-6 py-10">
+              <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <div className="flex items-center gap-3">
+                  <img src="/logo.png" alt="MyUniLoop" className="w-7 h-7 rounded-xl object-cover ring-1 ring-white/10" />
+                  <div>
+                    <span className="font-black gradient-text-dark block leading-tight">MyUniLoop</span>
+                    <span className="text-[11px] text-white/25">Leeban Soft. Dev. (SMC-Private) Limited</span>
+                  </div>
+                </div>
+                <p className="text-xs text-white/25">
+                  © 2026 Leeban Soft. Dev. (SMC-Private) Limited. All rights reserved.
+                </p>
+                <div className="flex flex-wrap gap-5 text-xs text-white/35">
+                  <Link href="/privacy"   className="hover:text-white transition-colors">Privacy Policy</Link>
+                  <Link href="/terms"     className="hover:text-white transition-colors">Terms of Use</Link>
+                  <Link href="/copyright" className="hover:text-white transition-colors">Copyright</Link>
+                  <Link href="/community" className="hover:text-white transition-colors">Community Guidelines</Link>
+                  <Link href="/contact"   className="hover:text-white transition-colors">Contact</Link>
+                </div>
               </div>
             </div>
           </footer>
