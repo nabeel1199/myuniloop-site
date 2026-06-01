@@ -137,7 +137,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-wrap gap-2 pt-1">
-                {["🍎 iOS", "🌙 Dark Mode", "⚡ Real-Time", "🔒 Student-Verified", "🌍 Multi-Country"].map((b) => (
+                {["🍎 iOS", "🤖 Android", "🌙 Dark Mode", "⚡ Real-Time", "🔒 Student-Verified", "🌍 Multi-Country"].map((b) => (
                   <span key={b} className="badge-light text-[11px] py-1 px-3">{b}</span>
                 ))}
               </div>
@@ -165,7 +165,7 @@ export default function Home() {
               { value: "1 App", label: "for your entire campus life" },
               { value: "9+", label: "features built for students" },
               { value: "Multi-Country", label: "MY · UK · PK · DE · AU & more" },
-              { value: "iOS Native", label: "with full dark mode" },
+              { value: "iOS & Android", label: "with full dark mode" },
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <p className="text-2xl font-black gradient-text">{s.value}</p>
@@ -214,7 +214,7 @@ export default function Home() {
               { icon: "📍", title: "Location-Based Filtering", tag: "Local First",
                 text: "Filter posts, listings, loops, and rent offers by country — Malaysia, Pakistan, UK, Germany, Australia, Singapore, and more." },
               { icon: "🌙", title: "Beautiful Dark Mode", tag: "Design",
-                text: "Fully adaptive dark and light mode across every single screen. Every colour, card, and button adapts — native iOS, smooth and warm." },
+                text: "Fully adaptive dark and light mode across every single screen. Every colour, card, and button adapts — on both iOS and Android, smooth and warm." },
             ].map((f) => (
               <div key={f.title} className="card-dark rounded-2xl p-5 hover:bg-white/[0.05] transition-all">
                 <div className="flex items-start gap-3.5">
@@ -653,7 +653,7 @@ export default function Home() {
         <div className="absolute -bottom-16 -right-16 w-72 h-72 bg-orange-50 rounded-full blur-2xl pointer-events-none" />
 
         <div className="mx-auto max-w-3xl px-6 text-center relative">
-          <span className="badge-light mb-6 inline-flex">🍎 Available on iOS</span>
+          <span className="badge-light mb-6 inline-flex">🍎🤖 Available on iOS &amp; Android</span>
           <h2 className="text-4xl font-black tracking-tight text-gray-900 md:text-6xl mt-4 mb-5">
             Ready to join your{" "}
             <span className="gradient-text">campus?</span>
@@ -674,6 +674,16 @@ export default function Home() {
                 <p className="text-base font-black">App Store</p>
               </div>
             </a>
+            <a
+              href="#"
+              className="flex items-center gap-3 rounded-2xl bg-[#01875f] px-8 py-4 text-white hover:bg-[#016b4d] transition-all shadow-xl hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">🤖</span>
+              <div className="text-left">
+                <p className="text-xs text-white/50 font-medium">Get it on</p>
+                <p className="text-base font-black">Google Play</p>
+              </div>
+            </a>
           </div>
 
           <div className="mx-auto max-w-sm">
@@ -681,7 +691,7 @@ export default function Home() {
             <WaitlistForm dark={false} />
           </div>
 
-          <p className="mt-8 text-sm text-gray-300">iOS · iPhone · Dark Mode · Multi-Country · Student-Verified</p>
+          <p className="mt-8 text-sm text-gray-300">iOS · Android · Dark Mode · Multi-Country · Student-Verified</p>
         </div>
       </section>
 
