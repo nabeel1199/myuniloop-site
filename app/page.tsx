@@ -1,59 +1,37 @@
-"use client"
 import Link from "next/link"
-import { useState } from "react"
 
-// ─── Waitlist Form ────────────────────────────────────────────────────────────
+// MyUniLoop on the App Store. Universal link — auto-redirects to the local store.
+const APP_STORE_URL = "https://apps.apple.com/app/id6767978238"
 
-function WaitlistForm({ dark = false }: { dark?: boolean }) {
-  const [email, setEmail] = useState("")
-  const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
-  const [error, setError] = useState("")
+// ─── Download Buttons ─────────────────────────────────────────────────────────
 
-  const handleSubmit = async () => {
-    if (!email) return
-    setLoading(true)
-    setError("")
-    setSuccess(false)
-    try {
-      const res = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      })
-      const data = await res.json()
-      if (res.ok) { setSuccess(true); setEmail("") }
-      else setError(data.error || "Something went wrong.")
-    } catch { setError("Something went wrong. Please try again.") }
-    setLoading(false)
-  }
-
+function DownloadButtons() {
   return (
-    <div className="flex flex-col gap-3 w-full">
-      <div className="flex flex-col gap-3 sm:flex-row">
-        <input
-          type="email"
-          placeholder="your@email.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
-          className={`w-full rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400/50 transition-all sm:w-72 ${
-            dark
-              ? "bg-white/[0.06] border border-white/10 text-white placeholder-white/30"
-              : "bg-white border border-orange-200 text-gray-800 placeholder-gray-400 shadow-sm"
-          }`}
-        />
-        <button
-          onClick={handleSubmit}
-          disabled={loading || !email}
-          className="btn-orange disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-        >
-          {loading ? "Joining..." : "Join Waitlist"}
-        </button>
+    <>
+      <a
+        href={APP_STORE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-3 rounded-2xl bg-gray-900 px-8 py-4 text-white hover:bg-black transition-all shadow-xl hover:-translate-y-0.5"
+      >
+        <span className="text-2xl">🍎</span>
+        <div className="text-left">
+          <p className="text-xs text-white/50 font-medium">Download on the</p>
+          <p className="text-base font-black">App Store</p>
+        </div>
+      </a>
+      {/* Android is in testing — mark Google Play as coming soon (not live yet). */}
+      <div
+        aria-disabled="true"
+        className="flex items-center gap-3 rounded-2xl bg-[#01875f]/50 px-8 py-4 text-white/90 shadow-xl cursor-default select-none"
+      >
+        <span className="text-2xl">🤖</span>
+        <div className="text-left">
+          <p className="text-xs text-white/50 font-medium">Coming soon to</p>
+          <p className="text-base font-black">Google Play</p>
+        </div>
       </div>
-      {success && <p className="text-sm font-semibold text-emerald-500">🎉 You&apos;re on the list — we&apos;ll be in touch!</p>}
-      {error && <p className="text-sm text-red-400">{error}</p>}
-    </div>
+    </>
   )
 }
 
@@ -132,8 +110,8 @@ export default function Home() {
                 anonymous tea posts. Everything. One app.
               </p>
 
-              <div className="w-full max-w-md">
-                <WaitlistForm dark={false} />
+              <div className="flex flex-col sm:flex-row gap-4">
+                <DownloadButtons />
               </div>
 
               <div className="flex flex-wrap gap-2 pt-1">
@@ -664,31 +642,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <a
-              href="#"
-              className="flex items-center gap-3 rounded-2xl bg-gray-900 px-8 py-4 text-white hover:bg-black transition-all shadow-xl hover:-translate-y-0.5"
-            >
-              <span className="text-2xl">🍎</span>
-              <div className="text-left">
-                <p className="text-xs text-white/50 font-medium">Download on the</p>
-                <p className="text-base font-black">App Store</p>
-              </div>
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-3 rounded-2xl bg-[#01875f] px-8 py-4 text-white hover:bg-[#016b4d] transition-all shadow-xl hover:-translate-y-0.5"
-            >
-              <span className="text-2xl">🤖</span>
-              <div className="text-left">
-                <p className="text-xs text-white/50 font-medium">Get it on</p>
-                <p className="text-base font-black">Google Play</p>
-              </div>
-            </a>
-          </div>
-
-          <div className="mx-auto max-w-sm">
-            <p className="text-sm text-gray-400 mb-3 font-medium">Or join the waitlist:</p>
-            <WaitlistForm dark={false} />
+            <DownloadButtons />
           </div>
 
           <p className="mt-8 text-sm text-gray-300">iOS · Android · Dark Mode · Multi-Country · Student-Verified</p>
