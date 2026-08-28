@@ -114,8 +114,12 @@ export default function Home() {
                 <DownloadButtons />
               </div>
 
+              <p className="text-sm text-gray-400 -mt-2">
+                Free to download · Now on iPhone — Android coming soon.
+              </p>
+
               <div className="flex flex-wrap gap-2 pt-1">
-                {["🍎 iOS", "🤖 Android", "🌙 Dark Mode", "⚡ Real-Time", "🔒 Student-Verified", "🌍 Multi-Country"].map((b) => (
+                {["✅ Free", "🍎 iOS", "🤖 Android soon", "🌙 Dark Mode", "⚡ Real-Time", "🔒 Student-Verified", "🌍 Multi-Country"].map((b) => (
                   <span key={b} className="badge-light text-[11px] py-1 px-3">{b}</span>
                 ))}
               </div>
@@ -143,7 +147,7 @@ export default function Home() {
               { value: "1 App", label: "for your entire campus life" },
               { value: "9+", label: "features built for students" },
               { value: "Multi-Country", label: "MY · UK · PK · DE · AU & more" },
-              { value: "iOS & Android", label: "with full dark mode" },
+              { value: "Free", label: "to download & join · iOS now" },
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <p className="text-2xl font-black gradient-text">{s.value}</p>
@@ -187,8 +191,8 @@ export default function Home() {
                 text: "Post or find room listings, contract replacements, and apartment rentals. Filter by country, chat directly with students." },
               { icon: "💬", title: "Real-Time Chat", tag: "Messaging",
                 text: "Message anyone 1-on-1 or in group chats. Share images and videos, react with emojis, and get instant push notifications." },
-              { icon: "☕", title: "Spill the Tea", tag: "Anonymous · Premium",
-                text: "Fully anonymous 24-hour posts for campus confessions and hot takes. React and reply without revealing who you are. Premium exclusive." },
+              { icon: "☕", title: "Spill the Tea", tag: "Anonymous · Free",
+                text: "Fully anonymous 24-hour posts for campus confessions and hot takes. React and reply without revealing who you are. Free for everyone." },
               { icon: "📍", title: "Location-Based Filtering", tag: "Local First",
                 text: "Filter posts, listings, loops, and rent offers by country — Malaysia, Pakistan, UK, Germany, Australia, Singapore, and more." },
               { icon: "🌙", title: "Beautiful Dark Mode", tag: "Design",
@@ -486,7 +490,7 @@ export default function Home() {
             </div>
 
             <div className="order-1 md:order-2">
-              <span className="badge-dark mb-5 inline-flex">☕ Premium Feature</span>
+              <span className="badge-dark mb-5 inline-flex">☕ Free for Everyone</span>
               <h2 className="text-3xl font-black tracking-tight text-white md:text-4xl mt-4 mb-3">
                 Spill the{" "}
                 <span className="gradient-text-dark">Tea</span>
@@ -498,7 +502,7 @@ export default function Home() {
                 Got something to say but don&apos;t want your name on it? Tea posts are
                 completely anonymous, disappear after 24 hours, and are visible only
                 to your campus. React, reply, keep it messy — no one will ever know it
-                was you. Exclusive to Premium members.
+                was you. Free for everyone.
               </p>
               <div className="flex flex-wrap gap-2.5">
                 {[
@@ -506,7 +510,7 @@ export default function Home() {
                   { icon: "⏳", text: "24-hour posts" },
                   { icon: "🎓", text: "Campus-only" },
                   { icon: "🔥", text: "React & reply" },
-                  { icon: "⭐", text: "Premium only" },
+                  { icon: "🆓", text: "Free for all" },
                 ].map((b) => (
                   <span key={b.text} className="badge-dark">
                     <span>{b.icon}</span>
@@ -631,7 +635,7 @@ export default function Home() {
         <div className="absolute -bottom-16 -right-16 w-72 h-72 bg-orange-50 rounded-full blur-2xl pointer-events-none" />
 
         <div className="mx-auto max-w-3xl px-6 text-center relative">
-          <span className="badge-light mb-6 inline-flex">🍎🤖 Available on iOS &amp; Android</span>
+          <span className="badge-light mb-6 inline-flex">🍎 Free on iPhone now — 🤖 Android coming soon</span>
           <h2 className="text-4xl font-black tracking-tight text-gray-900 md:text-6xl mt-4 mb-5">
             Ready to join your{" "}
             <span className="gradient-text">campus?</span>
@@ -645,7 +649,7 @@ export default function Home() {
             <DownloadButtons />
           </div>
 
-          <p className="mt-8 text-sm text-gray-300">iOS · Android · Dark Mode · Multi-Country · Student-Verified</p>
+          <p className="mt-8 text-sm text-gray-300">Free · iOS now · Android soon · Dark Mode · Multi-Country · Student-Verified</p>
         </div>
       </section>
 
