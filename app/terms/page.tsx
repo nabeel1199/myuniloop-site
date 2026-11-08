@@ -35,7 +35,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">2. Eligibility</h2>
           <p>
-            You must be at least 17 years of age to use MyUniLoop. By using the Service, you
+            You must be at least 18 years of age to use MyUniLoop. By using the Service, you
             represent and warrant that you meet this age requirement. We reserve the right to
             terminate accounts of users found to be underage.
           </p>
